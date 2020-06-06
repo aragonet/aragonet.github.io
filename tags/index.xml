@@ -1,0 +1,14 @@
+
+   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+     <channel>
+       <title>Tags on Aragonet</title>
+       <link>https://www.aragonet.github.io/tags/</link>
+       <description>Recent content in Tags on Aragonet</description>
+       <generator>Hugo -- gohugo.io</generator>
+       <copyright>Copyright &amp;copy; 2020 - Aragonet</copyright>
+       
+           <atom:link href="https://www.aragonet.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+       
+       
+     </channel>
+   </rss>

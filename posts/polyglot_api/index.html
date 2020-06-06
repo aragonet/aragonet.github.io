@@ -1,0 +1,121 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <title>Aragonet</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="Aragonet" /><meta name="generator" content="Hugo 0.72.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+  <script src="https://kit.fontawesome.com/b76b73e8e8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="https://www.aragonet.github.io/css/styles.css" /></head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="https://www.aragonet.github.io/">Aragonet</a>
+            </h1>
+
+      <ul id="social-media">
+        
+        
+          
+        <li><a href="https://github.com/aragonet"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a></li>
+           
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="https://www.aragonet.github.io/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Posts</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Polyglot API</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2020-06-06T00:00:00Z">Jun 6, 2020</time>
+        </li>
+        
+
+        
+
+        <li>4 minutes read</li>
+    </ul>
+</aside>
+
+    
+
+    <p>When a software developer starts with a new task one of the first things they have to think about is: How am I going to get the data I need from the server? What API endpoints do exists? What they do? What arguments do they receive and what values do they return?</p>
+<p>From my experience there are three ways to address this problem:</p>
+<ul>
+<li>Search through the code. Tough it may take you long if you don’t know where to start looking.</li>
+<li>Ask the buddy that worked on it. You partner will have to stop doing what he had to do to help you. No problem with that we are on the same boat, but if the interruptions are repeated you may sink.</li>
+<li>Search on the documentation. If it exists and it’s not outdated.</li>
+</ul>
+<p>We can all agree that the most adequate solution is to have all the API correctly documented. By correctly I mean that the developers know where they are, how to search on it and have confidence that the API is updated.
+This might seem easy, but in the real world it is really difficult to find good documentation. It’s a common problem between start-ups and bigger enterprises and the reason is that documenting software takes time and it’s not always to everyone’s taste.
+When a team agrees working on it, the easy way is to manually generate their API’s documentation, although sooner or later they’ll will find out that something is not updated and they’ll have to try the other two options. We should assume that people makes mistakes and they can forgive to update the documentation when they modify the API.
+One way to avoid this problem is to generate automatically the documentation from the source code. Then, 100% sure, the documentation will never be outdated.</p>
+<p>Let’s go back to the initial problem, and imagine that the developer has found what arguments are needed and what values it returns for the endpoint he was looking for. In order to work comfortable and consistently through his code he decides to create the object structures needed for the endpoint. He doesn’t know it but he is reinventing the wheel! The developer who created the API probably already defined an object with all the data required.
+If he is lucky and the language programming from the client is the same that the server, he can import the object so he won’t spend time rewriting the same object.
+Let’s suppose that he uses a different programming language. (Because nowadays, with all the new languages and the trend of using the latest programming language because it is faster, simpler or cooler). Then the developer will find himself replicating the same object structure once and again in different languages.</p>
+<p>In our team we solved that using gRPC. Its a RemoteProcedureCall framework that enables client and server applications to communicate. We have not yet used it with angry but so far it has helped us with all the problems described above and haven’t given us any.
+The best feature that I’ve found is the way it forces you to create and use the API between client and server.
+The API is created via a Protocol Buffers file where the schema of the services and methods are specified. Using this file, the server and client code, that includes all the API’s objects, can be automatically generated. This saves you all the work to create and maintain the object structures for each language.
+Not all programming languages have implemented the Protocol Buffers specification but pretty much all of the famous programming languages do (like Go or Dart2 :)</p>
+<p>If you need to modify an argument of an endpoint, you will be forced to modify the proto file and recreate the compiled files for the server and client and use those instead of the old ones. This is really helpful for long term development, and more if you use typed languages cause the compiler will complain before runtime if something has changed.
+Bear in mind that it is always good when a new version is launched to be compatible with the existent one, and gRPC gives you tools to make it easy, as versioning the package or marking arguments as deprecated…</p>
+<p>Another good point for gRPC is that from the proto file you define the schema you can generate swagger documentation using documentation generator plugins for Protocol Buffers. This way, each time the API changes the documentation will be re-generated so it will always be up to date.</p>
+<p>To finish but not less important is that the compiled Protocol Buffer files enables the code editor to auto-complete all services, methods, arguments and return values defined.</p>
+<p>It’s time to forget copying and pasting the REST URLs or creating the models file.
+This will make day-to-day work much easier.</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6>Copyright © 2020 - Aragonet
+    </footer>
+</div>
+<script src="https://www.aragonet.github.io/js/scripts.js"></script>
+
+</body>
+
+</html>
