@@ -17,7 +17,7 @@
          <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
          
          <guid>https://aragonet.github.io/posts/polyglot_api/</guid>
-         <description>&lt;p&gt;When a software developer starts with a new task one of the first things they have to think about is: How am I going to get the data I need from the server? What API endpoints do exists? What they do? What arguments do they receive and what values do they return?&lt;/p&gt;
+         <description>&lt;p&gt;When a software developer starts with a new task one of the first things he has to think about is: How am I going to get the data I need from the server? What API endpoints do exists? What they do? What arguments do they receive and what values do they return?&lt;/p&gt;
 &lt;p&gt;From my experience there are three ways to address this problem:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Search through the code. Tough it may take you long if you don’t know where to start looking.&lt;/li&gt;
