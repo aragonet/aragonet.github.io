@@ -2,21 +2,21 @@
    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
      <channel>
        <title>Posts on Aragonet</title>
-       <link>https://www.aragonet.github.io/posts/</link>
+       <link>https://aragonet.github.io/posts/</link>
        <description>Recent content in Posts on Aragonet</description>
        <generator>Hugo -- gohugo.io</generator>
        <copyright>Copyright &amp;copy; 2020 - Aragonet</copyright>
        <lastBuildDate>Sat, 06 Jun 2020 00:00:00 +0000</lastBuildDate>
        
-           <atom:link href="https://www.aragonet.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+           <atom:link href="https://aragonet.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
        
        
        <item>
          <title>Polyglot API</title>
-         <link>https://www.aragonet.github.io/posts/polyglot_api/</link>
+         <link>https://aragonet.github.io/posts/polyglot_api/</link>
          <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
          
-         <guid>https://www.aragonet.github.io/posts/polyglot_api/</guid>
+         <guid>https://aragonet.github.io/posts/polyglot_api/</guid>
          <description>&lt;p&gt;When a software developer starts with a new task one of the first things they have to think about is: How am I going to get the data I need from the server? What API endpoints do exists? What they do? What arguments do they receive and what values do they return?&lt;/p&gt;
 &lt;p&gt;From my experience there are three ways to address this problem:&lt;/p&gt;
 &lt;ul&gt;
