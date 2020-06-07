@@ -73,9 +73,9 @@
     <p>When a software developer starts with a new task one of the first things he has to think about is: How am I going to get the data I need from the server? What API endpoints do exists? What they do? What arguments do they receive and what values do they return?</p>
 <p>From my experience there are three ways to address this problem:</p>
 <ul>
-<li>Search through the code. Tough it may take you long if you don’t know where to start looking.</li>
-<li>Ask the buddy that worked on it. You partner will have to stop doing what he had to do to help you. No problem with that we are on the same boat, but if the interruptions are repeated you may sink.</li>
-<li>Search on the documentation. If it exists and it’s not outdated.</li>
+<li><em>Search through the code.</em> Tough it may take you long if you don’t know where to start looking.</li>
+<li><em>Ask the buddy that worked on it.</em> You partner will have to stop doing what he had to do to help you. No problem with that we are on the same boat, but if the interruptions are repeated you may sink.</li>
+<li><em>Search on the documentation.</em> If it exists and it’s not outdated.</li>
 </ul>
 <p>We can all agree that the most adequate solution is to have all the API correctly documented. By correctly I mean that the developers know where they are, how to search on it and have confidence that the API is updated.
 This might seem easy, but in the real world it is really difficult to find good documentation. It’s a common problem between start-ups and bigger enterprises and the reason is that documenting software takes time and it’s not always to everyone’s taste.
@@ -94,6 +94,18 @@ Bear in mind that it is always good when a new version is launched to be compati
 <p>To finish but not less important is that the compiled Protocol Buffer files enables the code editor to auto-complete all services, methods, arguments and return values defined.</p>
 <p>It’s time to forget copying and pasting the REST URLs or creating the models file.
 This will make day-to-day work much easier.</p>
+<h2 id="learn-more">Learn more</h2>
+<h4 id="basic-commands">Basic commands:</h4>
+<pre><code>// How to create compiled files for go
+protoc --go_out=plugins=grpc:aragonet aragonet/aragonet.proto
+// How to create copiled files for dart
+protoc --dart_out=grpc:frontend/lib/generated aragonet/aragonet.proto
+// How to create swagger documentation
+protoc --swagger_out=logtostderr=true:aragonet aragonet/aragonet.proto
+</code></pre><h4 id="documentation-links">Documentation links:</h4>
+<p><a href="https://grpc.io/docs/what-is-grpc/">https://grpc.io/docs/what-is-grpc/</a></p>
+<p><a href="https://grpc-ecosystem.github.io/grpc-gateway/">https://grpc-ecosystem.github.io/grpc-gateway/</a></p>
+<p><a href="https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger?tab=doc">https://pkg.go.dev/github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger?tab=doc</a></p>
 
 
 </article>
